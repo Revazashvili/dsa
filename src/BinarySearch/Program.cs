@@ -3,16 +3,16 @@ int[] arr = [1, 3, 5, 7, 9];
 Console.WriteLine($"Position: {Algorithm.BinarySearch(arr, 3)}");
 Console.WriteLine($"Position: {Algorithm.BinarySearch(arr, 2)}");
 
-public static class Algorithm
+/// <summary>
+/// Binary Search algorithm takes sorted array and one item, for every iteration it splits array in two halves
+/// to find passed element index. if item in the middle if less than passed, keeps searching in second half,
+/// otherwise in first part.
+/// 
+/// algorithm returns index of passed item in the array, if not exists -1.
+/// </summary>
+internal static class BinarySearch
 {
-    /// <summary>
-    /// Binary Search algorithm takes sorted array and one item, for every iteration it splits array in two halves
-    /// to find passed element index. if item in the middle if less than passed, keeps searching in second half,
-    /// otherwise in first part.
-    /// 
-    /// algorithm returns index of passed item in the array, if not exists -1.
-    /// </summary>
-    public static int BinarySearch(int[] array, int item)
+    internal static int Run(int[] array, int item)
     {
         // minimum index to search after in array
         var min = 0;
