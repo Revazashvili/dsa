@@ -1,7 +1,7 @@
 ﻿
 int[] arr = [1, 3, 5, 7, 9];
-Console.WriteLine($"Position: {Algorithm.BinarySearch(arr, 3)}");
-Console.WriteLine($"Position: {Algorithm.BinarySearch(arr, 2)}");
+Console.WriteLine($"Position: {BinarySearch.Run(arr, 3)}");
+Console.WriteLine($"Position: {BinarySearch.Run(arr, 2)}");
 
 /// <summary>
 /// Binary Search algorithm takes sorted array and one item, for every iteration it splits array in two halves
