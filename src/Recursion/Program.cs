@@ -9,5 +9,10 @@
 // Console.Write("Count of array using recursion: ");
 // Console.WriteLine(Count.Run([1, 2, 3, 4, 5]));
 
-Console.Write("Max of array using recursion: ");
-Console.WriteLine(Max.Run([5, 11, 4, 89, 33, -3]));
+// Console.Write("Max of array using recursion: ");
+// Console.WriteLine(Max.Run([5, 11, 4, 89, 33, -3]));
+
+Console.WriteLine("Binary Search using recursion: ");
+int[] arr = [1, 3, 5, 7, 9];
+Console.WriteLine($"Position: {BinarySearch.Run(arr, 5)}");
+Console.WriteLine($"Position: {BinarySearch.Run(arr, 2)}");
