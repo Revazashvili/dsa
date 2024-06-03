@@ -6,5 +6,8 @@
 // Console.Write("Sum of array using recursion: ");
 // Console.WriteLine(Sum.Run([1, 2, 3, 4, 5]));
 
-Console.Write("Count of array using recursion: ");
-Console.WriteLine(Maximum.Run([5, 11, 4, 89, 33, -3]));
+// Console.Write("Count of array using recursion: ");
+// Console.WriteLine(Count.Run([1, 2, 3, 4, 5]));
+
+Console.Write("Max of array using recursion: ");
+Console.WriteLine(Max.Run([5, 11, 4, 89, 33, -3]));

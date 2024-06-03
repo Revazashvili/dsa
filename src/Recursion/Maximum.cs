@@ -1,7 +1,7 @@
 /// <summary>
 /// Find max element in array using recursion
 /// </summary>
-internal static class Maximum
+internal static class Max
 {
     internal static int Run(int[] arr)
     {
