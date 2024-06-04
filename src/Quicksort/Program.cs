@@ -19,7 +19,9 @@ internal static class Quicksort
         if (arr.Length < 2)
             return arr;
 
-        var pivot = arr[0];
+        // if you take first element as pivot this would be worst case, you have to go through entire array. O(n^2)
+        // if you take middle one this would be faster, you divide array in two halves every time. O(n log n)
+        var pivot = arr[arr.Length / 2];
 
         var greater = (from i in arr where i > pivot select i).ToArray();
         var less = (from i in arr where i < pivot select i).ToArray();
