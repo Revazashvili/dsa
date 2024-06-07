@@ -3,10 +3,10 @@
 int[] arr = [1, 54, 2, 78, 9, 4, -3];
 Console.WriteLine("Sort array using quicksort algorithm");
 Console.Write("Before sort: ");
-ArrayExtensions.Print(arr);
+EnumerableExtensions.Print(arr);
 
 Console.Write("After sort: ");
-ArrayExtensions.Print(Quicksort.Run(arr));
+EnumerableExtensions.Print(Quicksort.Run(arr));
 
 /// <summary>
 /// Quicksort algorithm use Divide & Conquer (D&C). base case is array with 0 or 1 elements which don't need to be sorted

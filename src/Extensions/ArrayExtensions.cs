@@ -42,15 +42,7 @@ public static class ArrayExtensions
     /// <summary>
     /// Prints elements in array
     /// </summary>
-    public static void Print(IEnumerable<int> arr)
-    {
-        Console.WriteLine(string.Join(", ", arr));
-    }
-    
-    /// <summary>
-    /// Prints elements in array
-    /// </summary>
-    public static void RemoveAt(ref int[] arr, int index)
+    public static void RemoveAt<T>(ref T[] arr, int index)
     {
         var length = arr.Length;
         for (var i = index + 1; i < length; i++)

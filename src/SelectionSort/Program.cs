@@ -2,12 +2,12 @@
 
 int[] arr = [3, 2, 10, 4, 11];
 Console.WriteLine("Before:");
-ArrayExtensions.Print(arr);
+EnumerableExtensions.Print(arr);
 
 var result = SelectionSort.Run(arr);
 
 Console.WriteLine("After:");
-ArrayExtensions.Print(result);
+EnumerableExtensions.Print(result);
 
 /// <summary>
 /// Selection sort algorithm finds smallest element to passed array, removes it and appends to another sorted array
