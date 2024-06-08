@@ -27,9 +27,9 @@ public class Queue<T>
     private int _tail;
     private int _size;
 
-    public Queue(int capasity)
+    public Queue(int capacity)
     {
-        _entries = new T[capasity];
+        _entries = new T[capacity];
         _tail = 0;
         _head = 0;
         _size = 0;
