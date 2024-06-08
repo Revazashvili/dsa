@@ -1,9 +1,4 @@
-﻿
-var queue = new Queue<int>();
-queue.Enqueue(1);
-queue.Enqueue(2);
-queue.Enqueue(3);
-
+﻿var queue = new Queue<int>([1, 2, 3]);
 
 Console.WriteLine("Start dequeue");
 Console.WriteLine(queue.Dequeue());
@@ -36,7 +31,16 @@ public class Queue<T>
     }
 
     public Queue() : this(10) { }
-    
+
+    public Queue(IEnumerable<T> source) 
+        : this(source.TryGetNonEnumeratedCount(out var count) ? count : source.Count())
+    {
+        foreach (var item in source)
+            Enqueue(item);
+    }
+
+    public int Count => _size;
+
     public void Enqueue(T item)
     {
         _entries[_tail] = item;
@@ -50,7 +54,7 @@ public class Queue<T>
     
     public T Dequeue()
     {
-        if (_size == 0)
+        if (Count == 0)
             throw new Exception("empty queue");
         
         var itemToRemove = _entries[_head];
@@ -66,6 +70,14 @@ public class Queue<T>
         _tail = 0;
         _head = 0;
         _size = 0;
+    }
+
+    public T Peek()
+    {
+        if (Count == 0)
+            throw new Exception("empty queue");
+
+        return _entries[_head];
     }
 }
 
